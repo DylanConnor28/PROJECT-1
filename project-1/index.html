@@ -1,129 +1,113 @@
 <!doctype html>
 <html lang="en">
-
 <head>
   <base href="/">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="Description" content="Demonstration for project-1">
+  <meta name="Description" content="Search and visualization engine for HAXsite data">
+  <title>HAXsite Data Visualizer</title>
 
   <style>
     :root, html, body {
       margin: 0;
       padding: 0;
     }
-    #demo {
-      margin: var(--ddd-spacing-2);
+    #app {
+      margin: 16px;
     }
-    project-1 {
-      margin: var(--ddd-spacing-2);
-      border: var(--ddd-border-md);
-      border-radius: var(--ddd-radius-lg);
+    .header {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
     }
-    project-1:hover {
-      box-shadow: var(--ddd-boxShadow-sm);
+    #overview {
+      margin-top: 20px;
     }
-    #example {
-      --project-1-font-size: var(--ddd-font-size-l);
-      background-color: var(--ddd-accent-2);
-      color: var(--ddd-primary-17);
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 16px;
     }
   </style>
-  <title>project-1</title>
 </head>
 
 <body>
-  <div id="demo">
-    <h1>project-1</h1>
-    <!-- this is going to do whatever the tags defaults are -->
-    <h2>Default</h2>
-    <project-1></project-1>
-    <h2>Slot usage</h2>
-    <project-1 data-accent="2" data-primary="17"><div>Sample slot content</div></project-1>
-    <h2>Property usage</h2>
-    <project-1 id="example" title="Sample property title"></project-1>
-  </div>
-  <script type="module" src="./project-1.js"></script>
-
-  <!-- Take HAX, the Web and you further down the rabbit hole -->
-  <style>
-    #follow-the-white-rabbit {
-      margin: var(--ddd-spacing-4) auto 64px  16px;
-      background-color: var(--ddd-accent-4);
-      color: black;
-    }
-    #follow-the-white-rabbit[open] summary {
-      background-color: var(--ddd-accent-4) !important;
-      color: black;
-    }
-    #follow-the-white-rabbit[open] .content {
-      padding: 0 var(--ddd-spacing-4);
-    }
-    #follow-the-white-rabbit ul,
-    #follow-the-white-rabbit li {
-      padding: 0;
-      margin: 0;
-    }
-    #follow-the-white-rabbit li {
-      font-size: var(--ddd-font-size-xs);
-      list-style: none;
-    }
-    #follow-the-white-rabbit li strong,
-    #follow-the-white-rabbit li a {
-      padding: var(--ddd-spacing-2) var(--ddd-spacing-4);
-      color: black;
-      display: block;
-      font-weight: bold;
-    }
-    #follow-the-white-rabbit li:focus-within a,
-    #follow-the-white-rabbit li:hover a {
-      background-color: black;
-      color: yellow;
-    }
-  </style>
-  <details id="follow-the-white-rabbit" open>
-    <summary>How to Develop</summary>
-    <div class="content">
-      <p>
-      
-      </p>
-      <p>
-        You can edit the current page by modifying <code>index.html</code><br />
-        To edit your <strong>project-1</strong> tag, modify <code>src/project-1.js</code>.
-        This file contains all the HTML, CSS and JavaScript used to render your elements above!
-      </p>
-      <p>
-        Web components are easy to follow once you get used to their pattern.
-        Below are links to help on your journey. Good luck, we need you!
-      </p>
-      <ul>
-        <li><a href="https://haxtheweb.org/documentation/ddd" target="_blank">🧑‍🎨 Learn DDD HAX Design system</a></li>
-        <li><a href="https://lit.dev/playground/" target="_blank" rel="nofollow">🔥 Learn Lit</a></li>
-        <li><a href="https://hax.psu.edu" target="_blank">🧙 HAX The Web @ Penn State</a></li>
-      </ul>
-      <h2>Join and Share HAX</h2>
-      <ul>
-        <li><a href="https://github.com/haxtheweb/issues/issues" target="_blank" rel="nofollow">🔮 Ideas to HAX Harder, Better, Faster, Stronger</a></li>
-        <li><a href="https://bit.ly/hax-the-linkedin" target="_blank" rel="nofollow">👔 Share on LinkedIn</a></li>
-        <li><a href="https://bit.ly/hax-the-x" target="_blank" rel="nofollow">🧵 Tweet on X</a></li>
-        <li><a href="https://bit.ly/hax-discord" target="_blank" rel="nofollow">💬 Join Community</a></li>
-      </ul>
-      <h2>Learn the languages and tools</h2>
-      <ul>
-        <li><a href="https://w3schools.com" target="_blank" rel="nofollow">🌐 Learn HTML</a></li>
-        <li><a href="https://web.dev/learn/css/" target="_blank" rel="nofollow">🎨 Learn CSS</a></li>
-        <li><a href="http://Javascript.info" target="_blank" rel="nofollow">💻 Learn JavaScript (JS)</a></li>
-        <li><a href="https://gitimmersion.com" target="_blank" rel="nofollow">🦺 Learn Git / Github</a></li>
-        <li><a href="https://nodesource.com/blog/an-absolute-beginners-guide-to-using-npm/" target="_blank" rel="nofollow">📦 Learn NPM</a></li>
-        <li><a href="http://learnux.io" target="_blank" rel="nofollow">📐 Learn UX / UI development</a></li>
-      </ul>
-      <h2>Find purpose and inspiration</h2>
-      <ul>
-        <li><a href="https://www.youtube.com/watch?v=eC7xzavzEKY" target="_blank" rel="nofollow">🐟 This is Water - David Foster Wallace</a></li>
-        <li><a href="https://www.youtube.com/watch?v=kYfNvmF0Bqw" target="_blank" rel="nofollow">🏗️ Secrets of Life - Steve Jobs</a></li>
-        <li><strong>💡 <em>Never. Stop. Innovating.</em></strong></li>
-      </ul>
+  <div id="app">
+    <h1>HAXsite Data Visualizer</h1>
+    <div class="header">
+      <label for="url-input">Enter Site URL:</label>
+      <input type="url" id="url-input" placeholder="https://example.com" required>
+      <button id="analyze-button">Analyze</button>
     </div>
-  </details>
+
+    <!-- Overview section where site details will be displayed -->
+    <section id="overview">
+      <h2>Site Overview</h2>
+      <div id="site-info">
+        <p>Name: <span id="site-name"></span></p>
+        <p>Description: <span id="site-description"></span></p>
+        <p>Logo: <img id="site-logo" alt="Site Logo" width="50"></p>
+        <p>Theme: <span id="site-theme"></span></p>
+        <p>Created: <span id="site-created"></span></p>
+        <p>Last Updated: <span id="site-last-updated"></span></p>
+      </div>
+    </section>
+
+    <!-- Section to display fetched items as cards -->
+    <section id="items">
+      <h2>Items</h2>
+      <div class="card-container" id="card-container"></div>
+    </section>
+  </div>
+
+  <script type="module" src="./project-1.js"></script>
+  <script>
+    document.getElementById('analyze-button').addEventListener('click', async () => {
+      const urlInput = document.getElementById('url-input').value;
+      if (!urlInput) return alert('Please enter a valid URL.');
+
+      // Add /site.json if not already present
+      const fetchUrl = urlInput.endsWith('/site.json') ? urlInput : `${urlInput}/site.json`;
+
+      try {
+        const response = await fetch(fetchUrl);
+        if (!response.ok) throw new Error('Failed to fetch site.json');
+
+        const siteData = await response.json();
+        updateOverview(siteData);
+        displayItems(siteData.items || []);
+      } catch (error) {
+        alert(`Error: ${error.message}`);
+      }
+    });
+
+    function updateOverview(data) {
+      document.getElementById('site-name').textContent = data.name || 'N/A';
+      document.getElementById('site-description').textContent = data.description || 'N/A';
+      document.getElementById('site-logo').src = data.logo || '';
+      document.getElementById('site-theme').textContent = data.theme || 'N/A';
+      document.getElementById('site-created').textContent = data.created || 'N/A';
+      document.getElementById('site-last-updated').textContent = data.lastUpdated || 'N/A';
+    }
+
+    function displayItems(items) {
+      const cardContainer = document.getElementById('card-container');
+      cardContainer.innerHTML = '';
+
+      items.forEach(item => {
+        const card = document.createElement('div');
+        card.classList.add('card');
+
+        card.innerHTML = `
+          <h3>${item.title || 'Untitled'}</h3>
+          <p>${item.description || ''}</p>
+          ${item.image ? `<img src="${item.image}" alt="${item.title}" width="100%">` : ''}
+          <a href="${item.url}" target="_blank">View Content</a>
+          <a href="${item.source || ''}" target="_blank">View Source</a>
+        `;
+        cardContainer.appendChild(card);
+      });
+    }
+  </script>
 </body>
 </html>
