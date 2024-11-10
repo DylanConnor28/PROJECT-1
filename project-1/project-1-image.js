@@ -1,12 +1,12 @@
 import { LitElement, html, css } from "lit";
 
-export class NasaImage extends LitElement {
+export class ItemImage extends LitElement {
   static get properties() {
     return {
       source: { type: String },
       title: { type: String },
       alt: { type: String },
-      secondary_creator: { type: String },
+      creator: { type: String }, // generalize to creator
     };
   }
 
@@ -15,7 +15,7 @@ export class NasaImage extends LitElement {
     this.source = '';
     this.title = '';
     this.alt = '';
-    this.secondary_creator = '';
+    this.creator = '';
   }
 
   static get styles() {
@@ -59,7 +59,7 @@ export class NasaImage extends LitElement {
       >
         <img src="${this.source}" alt="${this.alt}" />
         <div class="info">${this.title}</div>
-        <div class="info">${this.secondary_creator}</div>
+        <div class="info">${this.creator}</div>
       </div>
     `;
   }
@@ -75,8 +75,8 @@ export class NasaImage extends LitElement {
   }
 
   static get tag() {
-    return "nasa-image";
+    return "item-image";
   }
 }
 
-customElements.define(Project.tag, ProjectImage);
+customElements.define(ItemImage.tag, ItemImage);

@@ -12,9 +12,9 @@ export class Project1 extends DDDSuper(I18NMixin(LitElement)) {
     return {
       ...super.properties,
       title: { type: String },
-      siteUrl: { type: String }, // to input URL
-      siteData: { type: Object }, // holds fetched site.json data
-      errorMessage: { type: String }, // to handle errors
+      siteUrl: { type: String },
+      siteData: { type: Object },
+      errorMessage: { type: String },
     };
   }
 
